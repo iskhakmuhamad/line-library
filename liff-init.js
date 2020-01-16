@@ -46,20 +46,6 @@ function showProfile() {
         liff.getProfile().then(function (profile) {
             document.getElementById("userId").textContent = profile.userId;
             document.getElementById("displayName").textContent = profile.displayName;
-
-            let profileImage = document.getElementById("profileImage");
-            if(profileImage.firstElementChild){
-                profileImage.removeChild(profileImage.firstElementChild);
-            }
-            const img = document.createElement('img');
-            img.height = "30px";
-            img.width = "30px";
-            img.rounded-circle;
-            img.src = profile.pictureUrl;
-            img.alt = "Profile Image";
-            
-
-            profileImage.appendChild(img);
             document.getElementById("statusMessage").textContent = profile.statusMessage;
         }).catch(function (err) {
             window.alert("Gagal Mendapatkan info profile " + err);
