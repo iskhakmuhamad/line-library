@@ -1,0 +1,23 @@
+table tr td {
+    padding: 8px;
+}
+
+#txtluas {
+    letter-spacing: 3px;
+    font-size: 2em;
+    color: #fff;
+    outline-color: none;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.ket {
+    letter-spacing: 3px;
+    font-size: 1.3em;
+    color: #fff;
+    outline-color: none;
+    outline: none;
+    border: none;
+    background: transparent;
+}

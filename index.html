@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Hitung Luas Bangun Datar</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+
+    <script src="hitung_luas.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="liff-init.js"></script>
+
+</head>
+
+<body style="background-color: #f67280;">
+    <div class="container mt-5">
+        <center>
+            <h2>Menghitung Luas Bangun datar</h2>
+            <select name="jenisbangun" id="jenisbangun" class="custom-select" style="margin: 10px; width: 18%;"
+                onchange="pilihbangun();">
+                <option value="persegipanjang">persegipanjang</option>
+                <option value="persegi">persegi</option>
+                <option value="lingkaran">lingkaran</option>
+                <option value="segitiga">segitiga</option>
+            </select>
+            <br>
+            <table>
+                <tr>
+                    <td><input type="text" id="sisi1" class="ket" value="Panjang" readonly /></td>
+                    <td style="font-size: 1.3em;"> : </td>
+                    <td><input type="number" id="txtpanjang" class="form-control" name="txtpanjang" /></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="sisi2" class="ket" value="Lebar" readonly /></td>
+                    <td style="font-size: 1.3em;"> : </td>
+                    <td><input type="number" id="txtlebar" class="form-control" name="txtlebar" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <input type="button" id="btnHitung" name="btnHitung" onclick="hitungLuas();"
+                            class="btn btn-success" value="Hitung" style="font-size: 1.2em;">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="ket" value="Luas" readonly /></td>
+                    <td style="font-size: 1.3em;"> : </td>
+                    <td>
+                        <input type="text" id="txtluas" name="txtluas" value="Hasil" readonly />
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="ket" value="Status" readonly /></td>
+                    <td style="font-size: 1.3em;"> : </td>
+                    <td>
+                        <input type="text" id="islogin" name="islogin" readonly />
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</body>
+
+</html>
