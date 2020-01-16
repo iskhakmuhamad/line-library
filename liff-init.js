@@ -52,7 +52,9 @@ function showProfile() {
                 profileImage.removeChild(profileImage.firstElementChild);
             }
             const img = document.createElement('img');
-            img.className = "img-circle";
+            img.height = "30px";
+            img.width = "30px";
+            img.rounded-circle;
             img.src = profile.pictureUrl;
             img.alt = "Profile Image";
             
