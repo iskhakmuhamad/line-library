@@ -22,15 +22,21 @@ function initiateLiff(myliffId) {
 function initializeApp() {
     document.getElementById("islogin").textContent = liff.isLoggedIn();
     document.getElementById("isclient").textContent = liff.isInClient();
-    if (!liff.isLoggedIn()) {
-        document.getElementById("login").addEventListener('click', function () {
-            liff.login();
-            alert("SELEMAT ANDA BERHASIL LOGIN");
-        })
-    } else {
-        document.getElementById("logout").addEventListener('click', function () {
-            liff.logout();
-            window.location.reload();
-        })
-    }
+    // if (!liff.isLoggedIn()) {
+    //     document.getElementById("login").addEventListener('click', function () {
+    //         liff.login();
+    //     })
+    // } else {
+    //     document.getElementById("logout").addEventListener('click', function () {
+    //         liff.logout();
+    //         window.location.reload();
+    //     })
+    // }
+    document.getElementById("login").addEventListener('click', function () {
+        liff.login();
+    })
+    document.getElementById("logout").addEventListener('click', function () {
+        liff.logout();
+        window.location.reload();
+    })
 }
