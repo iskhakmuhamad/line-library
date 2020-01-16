@@ -4,7 +4,7 @@ window.onload = function () {
 }
 
 function initiateLiff(myliffId) {
-    if (!liffId) {
+    if (!myliffId) {
         alert("Liff Id Masih Kosong");
     } else {
         liff.init({
