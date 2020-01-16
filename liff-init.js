@@ -52,11 +52,10 @@ function showProfile() {
                 profileImage.removeChild(profileImage.firstElementChild);
             }
             const img = document.createElement('img');
+            img.className = "img-circle";
             img.src = profile.pictureUrl;
             img.alt = "Profile Image";
-            img.className = "img-circle";
-            img.width = "50%";
-            img.height = "50%";
+            
 
             profileImage.appendChild(img);
             document.getElementById("statusMessage").textContent = profile.statusMessage;
