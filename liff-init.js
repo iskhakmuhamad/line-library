@@ -47,8 +47,8 @@ function showProfile() {
             document.getElementById("userId").textContent = profile.userId;
             document.getElementById("displayName").textContent = profile.displayName;
 
-            const profileImage = document.getElementById("profileImage");
-            profileImage.style.src = profile.pictureUrl;
+            document.getElementById("profileImage").style.src = profile.pictureUrl;
+            
             document.getElementById("statusMessage").textContent = profile.statusMessage;
         }).catch(function (err) {
             window.alert("Gagal Mendapatkan info profile " + err);
