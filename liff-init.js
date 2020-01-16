@@ -42,22 +42,15 @@ function initializeApp() {
 }
 
 function showProfile() {
-    document.getElementById("getprofile").addEventListener('click',function(){
-        liff.getProfile().then(function(profile) {
+    document.getElementById("getprofile").addEventListener('click', function () {
+        liff.getProfile().then(function (profile) {
             document.getElementById("userId").textContent = profile.userId;
             document.getElementById("displayName").textContent = profile.displayName;
-            
-            const profileImage = document.getElementById("profileImage");
-            if(profileImage.firstElementChild){
-                profileImage.remove(profileImage.firstElementChild);
-            }
-            const img =document.createElement('img');
-            img.src = profile.pictureUrl;
-            img.alt = "Profile Image";
 
-            profileImage.appendChild(img);
+            const profileImage = document.getElementById("profileImage");
+            profileImage.style.src = profile.pictureUrl;
             document.getElementById("statusMessage").textContent = profile.statusMessage;
-        }).catch(function(err) {
+        }).catch(function (err) {
             window.alert("Gagal Mendapatkan info profile " + err);
         })
     });
