@@ -48,9 +48,15 @@ function showProfile() {
             document.getElementById("displayName").textContent = profile.displayName;
 
             let profileImage = document.getElementById("profileImage");
+            if(profileImage.firstElementChild){
+                profileImage.removeChild(profileImage.firstElementChild);
+            }
             const img = document.createElement('img');
             img.src = profile.pictureUrl;
             img.alt = "Profile Image";
+            img.className = "img-circle";
+            img.width = "50%";
+            img.height = "50%";
 
             profileImage.appendChild(img);
             document.getElementById("statusMessage").textContent = profile.statusMessage;
