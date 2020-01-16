@@ -21,4 +21,5 @@ function initiateLiff(myliffId) {
 
 function initializeApp() {
     document.getElementById("islogin").textContent = liff.isLoggedIn();
+    document.getElementById("isclient").textContent = liff.isInClient();
 }
