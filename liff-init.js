@@ -1,5 +1,5 @@
 window.onload = function () {
-    let myliffId = "";
+    let myliffId = "1653759050-a7dgZ3B3";
     initiateLiff(myliffId);
 }
 
@@ -13,9 +13,12 @@ function initiateLiff(myliffId) {
             .then(() => {
                 initializeApp()
             })
+            .catch(() => {
+                alert("Gagal inisialisai liff")
+            })
     }
 }
 
 function initializeApp() {
-    document.getElementById("islogin").value = liff.isLoggedIn;
+    document.getElementById("islogin").value = liff.isLoggedIn();
 }
