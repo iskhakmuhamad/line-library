@@ -20,5 +20,5 @@ function initiateLiff(myliffId) {
 }
 
 function initializeApp() {
-    document.getElementById("islogin").textContent = "banana";
+    document.getElementById("islogin").textContent = liff.isLoggedIn();
 }
