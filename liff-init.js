@@ -32,23 +32,15 @@ function initializeApp() {
             window.location.reload();
         })
     }
-    document.getElementById("login").addEventListener('click', function () {
-        liff.login();
-    })
-    document.getElementById("logout").addEventListener('click', function () {
-        liff.logout();
-        window.location.reload();
-    })
+    document.getElementById("getprofile").addEventListener('click', showProfile())
 }
 
 function showProfile() {
-    document.getElementById("getprofile").addEventListener('click', function () {
-        liff.getProfile().then(function (profile) {
-            document.getElementById("userId").textContent = profile.userId;
-            document.getElementById("displayName").textContent = profile.displayName;
-            document.getElementById("statusMessage").textContent = profile.statusMessage;
-        }).catch(function (err) {
-            window.alert("Gagal Mendapatkan info profile " + err);
-        })
-    });
+    liff.getProfile().then(function (profile) {
+        document.getElementById("userId").textContent = profile.userId;
+        document.getElementById("displayName").textContent = profile.displayName;
+        document.getElementById("statusMessage").textContent = profile.statusMessage;
+    }).catch(function (err) {
+        window.alert("Gagal Mendapatkan info profile " + err);
+    })
 }
