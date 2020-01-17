@@ -32,15 +32,11 @@ function initializeApp() {
             window.location.reload();
         })
     }
-    document.getElementById("getprofile").addEventListener('click', showProfile())
-}
-
-function showProfile() {
-    liff.getProfile().then(function (profile) {
+    document.getElementById("getprofile").addEventListener('click', liff.getProfile().then(function (profile) {
         document.getElementById("userId").textContent = profile.userId;
         document.getElementById("displayName").textContent = profile.displayName;
         document.getElementById("statusMessage").textContent = profile.statusMessage;
     }).catch(function (err) {
         window.alert("Gagal Mendapatkan info profile " + err);
-    })
+    }))
 }
