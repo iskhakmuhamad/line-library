@@ -13,8 +13,8 @@ function initiateLiff(myliffId) {
             .then(() => {
                 initializeApp()
             })
-            .catch(() => {
-                alert("Gagal inisialisai liff")
+            .catch((err) => {
+                alert("Gagal inisialisai liff " + err)
             })
     }
 }
