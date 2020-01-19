@@ -17,9 +17,6 @@ function initiateLiff(myliffId) {
             .then(() => {
                 initializeApp()
             })
-            .catch(() => {
-                document.getElementById("initError").classList.remove("hidden");
-            })
     }
 }
 
