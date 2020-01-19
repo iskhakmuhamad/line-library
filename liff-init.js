@@ -13,7 +13,7 @@ function initiateLiff(myliffId) {
             .then(() => {
                 initializeApp()
             })
-            .catch(function (err){
+            .catch(function (err) {
                 alert("Gagal inisialisai liff " + err)
             })
     }
@@ -28,25 +28,31 @@ function initializeApp() {
         document.getElementById("login").addEventListener('click', function () {
             liff.login();
         })
-        document.getElementById("logout").disabled = true;
-
-        document.getElementById("getprofile").addEventListener('click', function(){
-            liff.getProfile().then(function (profile) {
-            document.getElementById("userId").textContent = profile.userId;
-            document.getElementById("displayName").textContent = profile.displayName;
-            document.getElementById("statusMessage").textContent = profile.statusMessage;
-        })}).catch(function (err) {
-            window.alert("Gagal Mendapatkan info profile " + err);
+        document.getElementById("logout").addEventListener('click', function () {
+            alert("Silahkan Login Terlebih dahulu");
+        })
+        document.getElementById("getprofile").addEventListener('click', function () {
+            alert("Silahkan Login Terlebih dahulu");
         })
     } else {
         document.getElementById("logout").addEventListener('click', function () {
             liff.logout();
             window.location.reload();
         })
-        document.getElementById("login").disabled = true;
-        document.getElementById("getprofile").addEventListener('click', function(){
-            alert("Silahkan Login Terlebih dahulu");
+
+        document.getElementById("login").addEventListener('click', function () {
+            alert("Anda Sudah Login");
         })
-        
+
+        document.getElementById("getprofile").addEventListener('click', function () {
+            liff.getProfile().then(function (profile) {
+                document.getElementById("userId").textContent = profile.userId;
+                document.getElementById("displayName").textContent = profile.displayName;
+                document.getElementById("statusMessage").textContent = profile.statusMessage;
+            })
+        }).catch(function (err) {
+            window.alert("Gagal Mendapatkan info profile " + err);
+        })
+
     }
 }
