@@ -24,6 +24,15 @@ function initializeApp() {
     document.getElementById("islogin").textContent = liff.isLoggedIn();
     document.getElementById("isclient").textContent = liff.isInClient();
 
+    if (liff.isInClient()) {
+        lineBrowser();
+    } else {
+        exBrowser();
+    }
+
+}
+
+function exBrowser() {
     if (!liff.isLoggedIn()) {
         document.getElementById("login").addEventListener('click', function () {
             liff.login();
@@ -53,6 +62,10 @@ function initializeApp() {
         }).catch(function (err) {
             window.alert("Gagal Mendapatkan info profile " + err);
         })
-
     }
+    document.getElementById("sendMessage").hidden = true;
+}
+
+function lineBrowser() {
+
 }
