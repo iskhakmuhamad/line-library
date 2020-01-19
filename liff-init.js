@@ -1,6 +1,7 @@
 window.onload = function () {
     const id = "1653759050-a7dgZ3B3";
-    let myliffId = id;
+    let myliffId = "";
+    myliffId = id;
     initiateLiff(myliffId);
 }
 
@@ -16,10 +17,10 @@ function initiateLiff(myliffId) {
                 initializeApp()
             })
             .catch(() => {
-               document.getElementById("initError").classList.remove("hidden");
+                document.getElementById("initError").classList.remove("hidden");
             })
     }
-}   
+}
 
 function initializeApp() {
 
