@@ -15,15 +15,15 @@ function initiateLiff(myliffId) {
                 initializeApp()
             })
             .catch((err) => {
-                alert("Gagal inisialisai liff " + err);
+                alert("Gagal inisialisasi liff " + err);
             })
     }
 }
 
 function initializeApp() {
 
-    document.getElementById("islogin").textContent = liff.isLoggedIn();
-    document.getElementById("isclient").textContent = liff.isInClient();
+    // document.getElementById("islogin").textContent = liff.isLoggedIn();
+    // document.getElementById("isclient").textContent = liff.isInClient();
 
     if (liff.isInClient()) {
         document.getElementById("sendMessage").hidden = false;
