@@ -15,7 +15,7 @@ function initiateLiff(myliffId) {
                 initializeApp()
             })
             .catch((err) => {
-                alert("Gagal inisialisai liff " + err)
+                alert("Gagal inisialisai liff " + err);
             })
     }
 }
