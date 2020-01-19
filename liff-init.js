@@ -60,6 +60,8 @@ function exBrowser() {
         //     alert("Anda Sudah Login");
         // })
 
+        document.getElementById("login").disabled = true;
+
         document.getElementById("getprofile").addEventListener('click', function () {
             liff.getProfile().then(function (profile) {
                 document.getElementById("userId").textContent = profile.userId;
