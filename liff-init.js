@@ -15,7 +15,7 @@ function initiateLiff(myliffId) {
                 initializeApp()
             })
             .catch((err) => {
-                alert("Gagal inisialisasi liff " + err);
+                alert("Ada yang salah inisialisasi liff " + err);
             })
     }
 }
@@ -43,12 +43,12 @@ function exBrowser() {
         document.getElementById("login").addEventListener('click', function () {
             liff.login();
         })
-        // document.getElementById("logout").addEventListener('click', function () {
-        //     alert("Silahkan Login Terlebih dahulu");
-        // })
-        // document.getElementById("getprofile").addEventListener('click', function () {
-        //     alert("Silahkan Login Terlebih dahulu");
-        // })
+        document.getElementById("logout").addEventListener('click', function () {
+            alert("Silahkan Login Terlebih dahulu");
+        })
+        document.getElementById("getprofile").addEventListener('click', function () {
+            alert("Silahkan Login Terlebih dahulu");
+        })
 
     } else {
         document.getElementById("logout").addEventListener('click', function () {
@@ -56,9 +56,9 @@ function exBrowser() {
             window.location.reload();
         })
 
-        // document.getElementById("login").addEventListener('click', function () {
-        //     alert("Anda Sudah Login");
-        // })
+        document.getElementById("login").addEventListener('click', function () {
+            alert("Anda Sudah Login");
+        })
 
         document.getElementById("login").disabled = true;
 
@@ -75,5 +75,14 @@ function exBrowser() {
 }
 
 function lineBrowser() {
-
+    document.getElementById("sendMessage").addEventListener('click', function () {
+        liff.sendMessages([{
+            'type': 'text',
+            'text': 'Yey Berhasil mengirimkan pesan'
+        }]).then(function () {
+            window.alert("Ini Pesan dari fitur Kirim Pesan");
+        }).catch(function (error) {
+            Window.alert("Error Mengirim Pesan " + error);
+        })
+    })
 }
