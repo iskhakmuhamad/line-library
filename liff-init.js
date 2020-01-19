@@ -7,13 +7,14 @@ function initiateLiff(myliffId) {
     if (!myliffId) {
         alert("Liff Id Masih Kosong");
     } else {
-        liff.init({
-            liffId: myliffId
-        })
+        liff
+            .init({
+                liffId: myliffId
+            })
             .then(() => {
                 initializeApp()
             })
-            .catch(function (err) {
+            .catch((err) => {
                 alert("Gagal inisialisai liff " + err)
             })
     }
@@ -65,7 +66,7 @@ function exBrowser() {
             })
         }).catch(function (err) {
             window.alert("Gagal Mendapatkan info profile " + err);
-        })    
+        })
     }
 }
 
