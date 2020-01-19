@@ -15,7 +15,7 @@ function initiateLiff(myliffId) {
                 initializeApp()
             })
             .catch((err) => {
-                alert("Ada yang salah inisialisasi liff " + err);
+               document.getElementById("initError").classList.remove("hidden");
             })
     }
 }
