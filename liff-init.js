@@ -25,9 +25,11 @@ function initializeApp() {
     document.getElementById("isclient").textContent = liff.isInClient();
 
     if (liff.isInClient()) {
+        document.getElementById("login").hidden = true;
+        document.getElementById("logout").hidden = true;
+        document.getElementById("getprofile").hidden = true;
         lineBrowser();
     } else {
-        document.getElementById("sendMessage").hidden = true;
         exBrowser();
     }
 
