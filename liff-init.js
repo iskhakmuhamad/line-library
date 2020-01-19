@@ -27,6 +27,7 @@ function initializeApp() {
     if (liff.isInClient()) {
         lineBrowser();
     } else {
+        document.getElementById("sendMessage").hidden = true;
         exBrowser();
     }
 
@@ -43,7 +44,6 @@ function exBrowser() {
         document.getElementById("getprofile").addEventListener('click', function () {
             alert("Silahkan Login Terlebih dahulu");
         })
-        document.getElementById("sendMessage").hidden = true;
     } else {
         document.getElementById("logout").addEventListener('click', function () {
             liff.logout();
@@ -62,10 +62,8 @@ function exBrowser() {
             })
         }).catch(function (err) {
             window.alert("Gagal Mendapatkan info profile " + err);
-        })
-        document.getElementById("sendMessage").hidden = true;
+        })    
     }
-    
 }
 
 function lineBrowser() {
