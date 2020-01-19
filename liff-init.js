@@ -30,6 +30,7 @@ function initializeApp() {
         document.getElementById("getprofile").hidden = true;
         lineBrowser();
     } else {
+        document.getElementById("sendMessage").hidden = false;
         exBrowser();
     }
 
