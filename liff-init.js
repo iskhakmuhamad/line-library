@@ -1,6 +1,7 @@
 window.onload = function () {
     const id = "1653759050-a7dgZ3B3";
     let myliffId = "";
+    
     myliffId = id;
     initiateLiff(myliffId);
 }
